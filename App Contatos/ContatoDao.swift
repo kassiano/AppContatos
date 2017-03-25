@@ -20,6 +20,18 @@ class ContatoDao : NSObject{
     }
     
     
+    func delete(id:Int)  {
+        contatos.remove(at: id)
+    }
+    
+    func getById(id:Int) ->Contato{
+        return contatos[id]
+    }
+    
+    func getAll() -> [Contato]{
+        return contatos;
+    }
+    
     func adicionar(_ contato:Contato){
         self.contatos.append(contato)
     }
