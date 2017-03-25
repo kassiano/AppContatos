@@ -13,6 +13,9 @@
 		1398F2861E869E1100169274 /* App_Contatos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1398F2841E869E1100169274 /* App_Contatos.xcdatamodeld */; };
 		1398F2881E869E1100169274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1398F2871E869E1100169274 /* Assets.xcassets */; };
 		1398F28B1E869E1100169274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1398F2891E869E1100169274 /* LaunchScreen.storyboard */; };
+		1398F2931E869F7300169274 /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398F2921E869F7300169274 /* Contato.swift */; };
+		1398F2951E869FD200169274 /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398F2941E869FD200169274 /* ContatoDao.swift */; };
+		1398F29D1E86B58100169274 /* ListaContatosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398F29C1E86B58100169274 /* ListaContatosTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		1398F2871E869E1100169274 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1398F28A1E869E1100169274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1398F28C1E869E1100169274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1398F2921E869F7300169274 /* Contato.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
+		1398F2941E869FD200169274 /* ContatoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = "<group>"; };
+		1398F29C1E86B58100169274 /* ListaContatosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaContatosTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				1398F2891E869E1100169274 /* LaunchScreen.storyboard */,
 				1398F28C1E869E1100169274 /* Info.plist */,
 				1398F2841E869E1100169274 /* App_Contatos.xcdatamodeld */,
+				1398F2921E869F7300169274 /* Contato.swift */,
+				1398F2941E869FD200169274 /* ContatoDao.swift */,
+				1398F29C1E86B58100169274 /* ListaContatosTableViewController.swift */,
 			);
 			path = "App Contatos";
 			sourceTree = "<group>";
@@ -139,7 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1398F2931E869F7300169274 /* Contato.swift in Sources */,
 				1398F2801E869E1100169274 /* ViewController.swift in Sources */,
+				1398F29D1E86B58100169274 /* ListaContatosTableViewController.swift in Sources */,
+				1398F2951E869FD200169274 /* ContatoDao.swift in Sources */,
 				1398F27E1E869E1000169274 /* AppDelegate.swift in Sources */,
 				1398F2861E869E1100169274 /* App_Contatos.xcdatamodeld in Sources */,
 			);

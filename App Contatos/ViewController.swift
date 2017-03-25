@@ -10,16 +10,51 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+   
+    @IBOutlet weak var txtNome: UITextField!
+    
+    @IBOutlet weak var txtEndereco: UITextField!
+    
+    @IBOutlet weak var txtTelefone: UITextField!
+    
+    @IBOutlet weak var txtSite: UITextField!
+    
+    let contatoDao: ContatoDao
+    
+    var contato:Contato
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        
+        contatoDao = ContatoDao.getInstance()
+        contato = Contato()
+        super.init(coder: aDecoder)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    func pegarDadosFormulario() {
+        contato = Contato(nome:txtNome.text!, endereco:txtEndereco.text!, telefone: txtTelefone.text!, site: txtSite.text! )
     }
-
+    
+    func criarContato()  {
+        contatoDao.adicionar(contato)
+    }
+    
+    func exibirListaContatos() {
+       _ = self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func adicionarContato(_ sender: UIBarButtonItem) {
+    
+        pegarDadosFormulario()
+        criarContato()
+        exibirListaContatos()
+        
+        //debug
+        print(contato.description)
+    }
+    
 
 }
 
