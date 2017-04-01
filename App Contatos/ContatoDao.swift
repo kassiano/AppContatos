@@ -9,16 +9,23 @@
 import Foundation
 
 
-class ContatoDao : NSObject{
+class ContatoDao {
 
-    var contatos:[Contato]
+    var contatos: [Contato]
     static var instance:ContatoDao?
     
     
-    private override init() {
-        contatos = Array()
+    private init() {
+        contatos = [Contato]()
+        contatos.append(Contato(nome: "Teste 1", endereco: "Rua vergueiro", telefone: "889956", site: "google.com"))
+        contatos.append(Contato(nome: "Teste 2", endereco: "Rua vergueiro", telefone: "889956", site: "google.com"))
     }
     
+    
+    func getPosition(_ contato:Contato) -> Int{
+    
+        return contatos.index(of: contato)!
+    }
     
     func delete(id:Int)  {
         contatos.remove(at: id)

@@ -21,23 +21,49 @@ class ViewController: UIViewController {
     
     let contatoDao: ContatoDao
     
-    var contato:Contato
+    var contato:Contato?
+    
+    var delegate: ListaContatosTableViewController?
     
     
     required init?(coder aDecoder: NSCoder) {
         
         contatoDao = ContatoDao.getInstance()
-        contato = Contato()
         super.init(coder: aDecoder)
     }
     
-    
-    func pegarDadosFormulario() {
-        contato = Contato(nome:txtNome.text!, endereco:txtEndereco.text!, telefone: txtTelefone.text!, site: txtSite.text! )
+    override func viewDidLoad() {
+        
+        if contato != nil {
+        
+            let btnEditar = UIBarButtonItem(title: "salvar", style: .plain, target: self, action: #selector(atualizarContato))
+            self.navigationItem.rightBarButtonItem = btnEditar
+            
+            
+            txtNome.text = contato?.nome
+            txtEndereco.text = contato?.endereco
+            txtTelefone.text = contato?.telefone
+            txtSite.text = contato?.site
+        }
     }
     
-    func criarContato()  {
-        contatoDao.adicionar(contato)
+    func atualizarContato(){
+        pegarDadosFormulario()
+        exibirListaContatos()
+        
+        self.delegate?.contatoAtualizado(contato!)
+    }
+    
+    func pegarDadosFormulario() {
+        
+        contato?.nome = txtNome.text!
+        contato?.endereco = txtEndereco.text!
+        contato?.telefone = txtTelefone.text!
+        contato?.site = txtSite.text!
+    }
+    
+    func criarContato() {
+        contatoDao.adicionar(contato!)
     }
     
     func exibirListaContatos() {
@@ -47,14 +73,14 @@ class ViewController: UIViewController {
     
     @IBAction func adicionarContato(_ sender: UIBarButtonItem) {
     
+        contato = Contato()
+        
         pegarDadosFormulario()
         criarContato()
         exibirListaContatos()
         
-        //debug
-        print(contato.description)
+        
+        self.delegate?.contatoAtualizado(contato!)
     }
-    
-
 }
 

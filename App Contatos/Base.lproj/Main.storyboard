@@ -9,7 +9,7 @@
         <!--Novo Contato-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="App_Contatos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FormContato" id="BYZ-38-t0r" customClass="ViewController" customModule="App_Contatos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -95,6 +95,50 @@
             </objects>
             <point key="canvasLocation" x="2216" y="131"/>
         </scene>
+        <!--Teste View Controller-->
+        <scene sceneID="oQR-MJ-XIJ">
+            <objects>
+                <viewController id="LMa-2x-X1j" customClass="TesteViewController" customModule="App_Contatos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x0R-vj-fBW"/>
+                        <viewControllerLayoutGuide type="bottom" id="O4k-vU-yeC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pEG-xY-oVg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y3l-ua-Xbg">
+                                <frame key="frameInset" minY="198" width="320" height="302"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gue-Yc-WcC">
+                                <frame key="frameInset" minX="78" minY="48" width="209" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKE-vx-7FI">
+                                <frame key="frameInset" minX="88" minY="96" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="addToTable:" destination="LMa-2x-X1j" eventType="touchUpInside" id="uKp-DC-XzA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="y3l-ua-Xbg" id="DdK-cl-icz"/>
+                        <outlet property="txtTask" destination="Gue-Yc-WcC" id="4JR-rL-rIi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xi6-gL-9Dx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3225" y="119"/>
+        </scene>
         <!--Contatos-->
         <scene sceneID="0wZ-aX-TBY">
             <objects>
@@ -121,7 +165,7 @@
                     <navigationItem key="navigationItem" title="Contatos" id="w6f-fz-F4z">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ew5-dg-TXg">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="ZoK-Es-Apv"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="addSegue" id="ZoK-Es-Apv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

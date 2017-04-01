@@ -16,6 +16,9 @@
 		1398F2931E869F7300169274 /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398F2921E869F7300169274 /* Contato.swift */; };
 		1398F2951E869FD200169274 /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398F2941E869FD200169274 /* ContatoDao.swift */; };
 		1398F29D1E86B58100169274 /* ListaContatosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398F29C1E86B58100169274 /* ListaContatosTableViewController.swift */; };
+		13AFBA601E8FEAD300A6F4CE /* TesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AFBA5F1E8FEAD300A6F4CE /* TesteViewController.swift */; };
+		13E1B4641E8FFDAC00CD1191 /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1B4631E8FFDAC00CD1191 /* FormularioContatoViewControllerDelegate.swift */; };
+		13E1B46E1E903BFB00CD1191 /* GerenciadorDeAcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1B46D1E903BFB00CD1191 /* GerenciadorDeAcoes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		1398F2921E869F7300169274 /* Contato.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
 		1398F2941E869FD200169274 /* ContatoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = "<group>"; };
 		1398F29C1E86B58100169274 /* ListaContatosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaContatosTableViewController.swift; sourceTree = "<group>"; };
+		13AFBA5F1E8FEAD300A6F4CE /* TesteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TesteViewController.swift; sourceTree = "<group>"; };
+		13E1B4631E8FFDAC00CD1191 /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
+		13E1B46D1E903BFB00CD1191 /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerenciadorDeAcoes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		1398F27C1E869E1000169274 /* App Contatos */ = {
 			isa = PBXGroup;
 			children = (
+				13AFBA5F1E8FEAD300A6F4CE /* TesteViewController.swift */,
 				1398F27D1E869E1000169274 /* AppDelegate.swift */,
 				1398F27F1E869E1100169274 /* ViewController.swift */,
 				1398F2811E869E1100169274 /* Main.storyboard */,
@@ -72,6 +79,8 @@
 				1398F2921E869F7300169274 /* Contato.swift */,
 				1398F2941E869FD200169274 /* ContatoDao.swift */,
 				1398F29C1E86B58100169274 /* ListaContatosTableViewController.swift */,
+				13E1B4631E8FFDAC00CD1191 /* FormularioContatoViewControllerDelegate.swift */,
+				13E1B46D1E903BFB00CD1191 /* GerenciadorDeAcoes.swift */,
 			);
 			path = "App Contatos";
 			sourceTree = "<group>";
@@ -150,9 +159,12 @@
 			files = (
 				1398F2931E869F7300169274 /* Contato.swift in Sources */,
 				1398F2801E869E1100169274 /* ViewController.swift in Sources */,
+				13E1B4641E8FFDAC00CD1191 /* FormularioContatoViewControllerDelegate.swift in Sources */,
+				13AFBA601E8FEAD300A6F4CE /* TesteViewController.swift in Sources */,
 				1398F29D1E86B58100169274 /* ListaContatosTableViewController.swift in Sources */,
 				1398F2951E869FD200169274 /* ContatoDao.swift in Sources */,
 				1398F27E1E869E1000169274 /* AppDelegate.swift in Sources */,
+				13E1B46E1E903BFB00CD1191 /* GerenciadorDeAcoes.swift in Sources */,
 				1398F2861E869E1100169274 /* App_Contatos.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +327,7 @@
 				1398F2911E869E1100169274 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -9,15 +9,14 @@
 import Foundation
 
 
-class Contato {
+class Contato : Equatable {
 
     var nome:String?
     var endereco:String?
     var telefone:String?
     var site:String?
     
-    
-    init() {
+    init(){
     }
     
     init(nome:String, endereco:String, telefone:String, site:String) {
@@ -29,9 +28,22 @@ class Contato {
     }
     
     var description: String{
-    
         return "Nome: \(self.nome)\nEnd.: \(self.endereco)\nTelefone: \(self.telefone)\nSite: \(self.site)";
     }
-    
 
+    
+    static func ==(lhs: Contato, rhs: Contato) -> Bool{
+        
+        if(lhs === rhs)
+        {
+            return true
+        }
+        /*if lhs.nome == rhs.nome {
+            return true
+        }*/
+        
+        return false
+    }
 }
+
+
