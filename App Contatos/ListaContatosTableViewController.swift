@@ -44,11 +44,12 @@ class ListaContatosTableViewController: UITableViewController, FormularioContato
                 
                 let contato = contatoDao.getById(id: index.row)
                     
+                let acoes = GerenciadorDeAcoes(do: contato)
                 
+                acoes.show(on: self)
             }
         }
-        
-        
+    
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

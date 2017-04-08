@@ -6,7 +6,7 @@
 //  Copyright © 2017 Caelum. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 class Contato : Equatable {
@@ -15,6 +15,9 @@ class Contato : Equatable {
     var endereco:String?
     var telefone:String?
     var site:String?
+    var imagem:UIImage?
+    var latitude:NSNumber?
+    var longitude:NSNumber?
     
     init(){
     }

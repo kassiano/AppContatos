@@ -16,9 +16,12 @@
 		1398F2931E869F7300169274 /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398F2921E869F7300169274 /* Contato.swift */; };
 		1398F2951E869FD200169274 /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398F2941E869FD200169274 /* ContatoDao.swift */; };
 		1398F29D1E86B58100169274 /* ListaContatosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398F29C1E86B58100169274 /* ListaContatosTableViewController.swift */; };
+		13A388BB1E992D270020E94A /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A388BA1E992D270020E94A /* noimage.png */; };
+		13A388BD1E9955750020E94A /* ContatosNoMapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A388BC1E9955750020E94A /* ContatosNoMapaViewController.swift */; };
 		13AFBA601E8FEAD300A6F4CE /* TesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AFBA5F1E8FEAD300A6F4CE /* TesteViewController.swift */; };
 		13E1B4641E8FFDAC00CD1191 /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1B4631E8FFDAC00CD1191 /* FormularioContatoViewControllerDelegate.swift */; };
 		13E1B46E1E903BFB00CD1191 /* GerenciadorDeAcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1B46D1E903BFB00CD1191 /* GerenciadorDeAcoes.swift */; };
+		89969E237E6E230F61415788 /* Pods_App_Contatos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313B62161E1FDBB05BE661F4 /* Pods_App_Contatos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +36,15 @@
 		1398F2921E869F7300169274 /* Contato.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
 		1398F2941E869FD200169274 /* ContatoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = "<group>"; };
 		1398F29C1E86B58100169274 /* ListaContatosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaContatosTableViewController.swift; sourceTree = "<group>"; };
+		13A388BA1E992D270020E94A /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
+		13A388BC1E9955750020E94A /* ContatosNoMapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatosNoMapaViewController.swift; sourceTree = "<group>"; };
+		13A388BE1E9960BA0020E94A /* VilaMariana.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VilaMariana.gpx; sourceTree = "<group>"; };
 		13AFBA5F1E8FEAD300A6F4CE /* TesteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TesteViewController.swift; sourceTree = "<group>"; };
 		13E1B4631E8FFDAC00CD1191 /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		13E1B46D1E903BFB00CD1191 /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerenciadorDeAcoes.swift; sourceTree = "<group>"; };
+		313B62161E1FDBB05BE661F4 /* Pods_App_Contatos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Contatos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7117E6D86FDA7280D720FEA8 /* Pods-App Contatos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Contatos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App Contatos/Pods-App Contatos.debug.xcconfig"; sourceTree = "<group>"; };
+		728CE796BA587A95FA8F01DE /* Pods-App Contatos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Contatos.release.xcconfig"; path = "Pods/Target Support Files/Pods-App Contatos/Pods-App Contatos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89969E237E6E230F61415788 /* Pods_App_Contatos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +64,8 @@
 			children = (
 				1398F27C1E869E1000169274 /* App Contatos */,
 				1398F27B1E869E1000169274 /* Products */,
+				D0C50FD91F96A2C22E8A5748 /* Pods */,
+				3CB35C9574DE5589533F8CD5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +80,7 @@
 		1398F27C1E869E1000169274 /* App Contatos */ = {
 			isa = PBXGroup;
 			children = (
+				13A388BA1E992D270020E94A /* noimage.png */,
 				13AFBA5F1E8FEAD300A6F4CE /* TesteViewController.swift */,
 				1398F27D1E869E1000169274 /* AppDelegate.swift */,
 				1398F27F1E869E1100169274 /* ViewController.swift */,
@@ -81,8 +94,27 @@
 				1398F29C1E86B58100169274 /* ListaContatosTableViewController.swift */,
 				13E1B4631E8FFDAC00CD1191 /* FormularioContatoViewControllerDelegate.swift */,
 				13E1B46D1E903BFB00CD1191 /* GerenciadorDeAcoes.swift */,
+				13A388BC1E9955750020E94A /* ContatosNoMapaViewController.swift */,
+				13A388BE1E9960BA0020E94A /* VilaMariana.gpx */,
 			);
 			path = "App Contatos";
+			sourceTree = "<group>";
+		};
+		3CB35C9574DE5589533F8CD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				313B62161E1FDBB05BE661F4 /* Pods_App_Contatos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0C50FD91F96A2C22E8A5748 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7117E6D86FDA7280D720FEA8 /* Pods-App Contatos.debug.xcconfig */,
+				728CE796BA587A95FA8F01DE /* Pods-App Contatos.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,9 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1398F28F1E869E1100169274 /* Build configuration list for PBXNativeTarget "App Contatos" */;
 			buildPhases = (
+				655863464F02B5513D2883CC /* [CP] Check Pods Manifest.lock */,
 				1398F2761E869E0F00169274 /* Sources */,
 				1398F2771E869E0F00169274 /* Frameworks */,
 				1398F2781E869E0F00169274 /* Resources */,
+				2C7F76990124C05068A5FBE4 /* [CP] Embed Pods Frameworks */,
+				75302484492FB0FBFD72A332 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,11 +181,60 @@
 			files = (
 				1398F28B1E869E1100169274 /* LaunchScreen.storyboard in Resources */,
 				1398F2881E869E1100169274 /* Assets.xcassets in Resources */,
+				13A388BB1E992D270020E94A /* noimage.png in Resources */,
 				1398F2831E869E1100169274 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C7F76990124C05068A5FBE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App Contatos/Pods-App Contatos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		655863464F02B5513D2883CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		75302484492FB0FBFD72A332 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App Contatos/Pods-App Contatos-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1398F2761E869E0F00169274 /* Sources */ = {
@@ -166,6 +250,7 @@
 				1398F27E1E869E1000169274 /* AppDelegate.swift in Sources */,
 				13E1B46E1E903BFB00CD1191 /* GerenciadorDeAcoes.swift in Sources */,
 				1398F2861E869E1100169274 /* App_Contatos.xcdatamodeld in Sources */,
+				13A388BD1E9955750020E94A /* ContatosNoMapaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +371,7 @@
 		};
 		1398F2901E869E1100169274 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7117E6D86FDA7280D720FEA8 /* Pods-App Contatos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "App Contatos/Info.plist";
@@ -298,6 +384,7 @@
 		};
 		1398F2911E869E1100169274 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 728CE796BA587A95FA8F01DE /* Pods-App Contatos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "App Contatos/Info.plist";
