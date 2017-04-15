@@ -7,30 +7,20 @@
 //
 
 import UIKit
+import MapKit
+import CoreData
 
+class Contato : NSManagedObject , MKAnnotation {
 
-class Contato : Equatable {
-
-    var nome:String?
-    var endereco:String?
-    var telefone:String?
-    var site:String?
-    var imagem:UIImage?
-    var latitude:NSNumber?
-    var longitude:NSNumber?
+    @NSManaged var nome:String?
+    @NSManaged var endereco:String?
+    @NSManaged var telefone:String?
+    @NSManaged var site:String?
+    @NSManaged var imagem:UIImage?
+    @NSManaged var latitude:NSNumber?
+    @NSManaged var longitude:NSNumber?
     
-    init(){
-    }
-    
-    init(nome:String, endereco:String, telefone:String, site:String) {
-        
-        self.nome = nome;
-        self.endereco = endereco;
-        self.telefone = telefone;
-        self.site = site;
-    }
-    
-    var description: String{
+    override var description: String{
         return "Nome: \(self.nome)\nEnd.: \(self.endereco)\nTelefone: \(self.telefone)\nSite: \(self.site)";
     }
 
@@ -47,6 +37,29 @@ class Contato : Equatable {
         
         return false
     }
+    
+    
+    
+    public var coordinate: CLLocationCoordinate2D {
+        get{
+            return CLLocationCoordinate2DMake(CLLocationDegrees(self.latitude!)  , CLLocationDegrees(self.longitude!) )
+        }
+    }
+    
+    
+    // Title and subtitle for use by selection UI.
+    public var title: String? {
+        get {
+           return self.nome
+        }
+    }
+    
+    public var subtitle: String? {
+        get{
+            return self.endereco
+        }
+    }
+    
 }
 
 

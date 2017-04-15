@@ -97,6 +97,8 @@ UIImagePickerControllerDelegate{
         pegarDadosFormulario()
         exibirListaContatos()
         
+        contatoDao.saveContext()
+        
         self.delegate?.contatoAtualizado(contato!)
     }
     
@@ -109,14 +111,13 @@ UIImagePickerControllerDelegate{
         contato?.imagem = imageView.image
         
         
-        if let latInt = Int(txtLatitude.text!) {
-            let latitude = NSNumber(value:latInt)
-            contato?.latitude = latitude
+        if let latitude = Double(self.txtLatitude.text!) {
+            self.contato?.latitude = latitude as NSNumber?
         }
         
-        if let lonInt = Int(txtLongitude.text!) {
-            let longitude = NSNumber(value:lonInt)
-            contato?.longitude = longitude
+       
+        if let longitude = Double(self.txtLongitude.text!) {
+            self.contato?.longitude = longitude as NSNumber?
         }
         
     }
@@ -186,8 +187,10 @@ UIImagePickerControllerDelegate{
     @IBOutlet var selectImage: UITapGestureRecognizer!
     
     @IBAction func adicionarContato(_ sender: UIBarButtonItem) {
-    
-        contato = Contato()
+
+        //contato = Contato(context : contatoDao.persistentContainer.viewContext )
+        
+        contato = contatoDao.novoContato()
         
         pegarDadosFormulario()
         criarContato()
@@ -221,11 +224,17 @@ UIImagePickerControllerDelegate{
                 self.txtLatitude.text = coord.latitude.description
                 self.txtLongitude.text = coord.longitude.description
                     
-                if let btn = sender as? UIButton{
-                    btn.isHidden = false
-                }
+               
             
             }
+            
+            print(erro)
+            
+            if let btn = sender as? UIButton{
+                btn.isHidden = false
+            }
+            
+            self.activityIndicator.stopAnimating()
         
         })
         

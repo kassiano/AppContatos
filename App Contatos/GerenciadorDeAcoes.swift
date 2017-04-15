@@ -46,10 +46,16 @@ class GerenciadorDeAcoes{
             self.exibirMapa()
         })
         
+        let verClima = UIAlertAction(title: "Ver Clima", style: .default, handler: {
+            (action) in
+            self.verClima()
+        })
+        
         alert.addAction(cancel)
         alert.addAction(ligar)
         alert.addAction(abrirSite)
         alert.addAction(exibirMapa)
+        alert.addAction(verClima)
         
         controller.present(alert, animated: true)
     }
@@ -94,6 +100,20 @@ class GerenciadorDeAcoes{
     
         UIApplication.shared.open(URL(string:url)!, options: [:], completionHandler: nil)
         
+    }
+    
+    func verClima(){
+        
+        
+    
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if let temperatura = storyboard.instantiateViewController(withIdentifier: "TelaTemperatura") as? TemperaturaViewController {
+       
+            temperatura.contato = contato
+            
+            controller?.navigationController?.pushViewController(temperatura, animated: true)
+        }
     }
     
 }

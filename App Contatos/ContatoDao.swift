@@ -7,18 +7,78 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
-
-class ContatoDao {
+class ContatoDao : CoreDataUtil {
 
     var contatos: [Contato]
     static var instance:ContatoDao?
     
     
-    private init() {
+    private override init() {
+        
         contatos = [Contato]()
-        contatos.append(Contato(nome: "Teste 1", endereco: "Rua vergueiro", telefone: "889956", site: "google.com"))
-        contatos.append(Contato(nome: "Teste 2", endereco: "Rua vergueiro", telefone: "889956", site: "google.com"))
+    }
+    
+    
+    func novoContato() -> Contato{
+    
+        return Contato(context: self.persistentContainer.viewContext)
+    }
+    
+    
+    
+    func criaContatosPadrao(){
+        
+        
+        let conf = UserDefaults.standard
+        
+        let jafoi = conf.bool(forKey: "ja_inseridos")
+        
+        if (!jafoi){
+        
+            
+            let walt = self.novoContato()
+            walt.nome = "Walter White"
+            walt.endereco = "Av Paulista"
+            walt.telefone = "889956"
+            walt.site = "google.com"
+                
+            /*
+            let saul = Contato(context : context!,nome: "Saul", endereco: "Rua vergueiro", telefone: "889956", site:    "google.com")
+            let gus = Contato(context : context!,nome: "Gustavo", endereco: "Av 9 de Julho", telefone: "11999952", site: "lospolloshermanos.com")
+             saul.imagem = UIImage(named: "saul")
+             gus.imagem = UIImage(named: "gus")
+             //contatos.append(walt)
+             */
+            
+            walt.imagem = UIImage(named: "walterwhite")
+            
+        
+            self.saveContext()
+            
+            conf.set(true, forKey: "ja_inseridos")
+            conf.synchronize()
+            
+        }
+    }
+    
+    
+    func carregarContatos(){
+     
+        let busca = NSFetchRequest<Contato>(entityName: "Contato")
+        let orderBy = NSSortDescriptor(key: "nome", ascending: true)
+        
+        busca.sortDescriptors = [orderBy]
+        
+        do{
+            self.contatos = try self.persistentContainer.viewContext.fetch(busca)
+            
+        }catch let erro as NSError{
+        
+            print("Erro: \(erro.localizedDescription)")
+        }
     }
     
     
@@ -29,6 +89,7 @@ class ContatoDao {
     
     func delete(id:Int)  {
         contatos.remove(at: id)
+         self.saveContext()
     }
     
     func getById(id:Int) ->Contato{
@@ -41,6 +102,7 @@ class ContatoDao {
     
     func adicionar(_ contato:Contato){
         self.contatos.append(contato)
+        self.saveContext()
     }
     
     
@@ -57,6 +119,7 @@ class ContatoDao {
             self.instance = ContatoDao();
         }
         
+        instance?.carregarContatos()
         return self.instance!;
     }
 

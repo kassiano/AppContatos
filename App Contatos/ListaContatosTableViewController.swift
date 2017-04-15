@@ -19,6 +19,7 @@ class ListaContatosTableViewController: UITableViewController, FormularioContato
     required init?(coder aDecoder: NSCoder) {
         
         contatoDao = ContatoDao.getInstance()
+        contatoDao.criaContatosPadrao()
         super.init(coder: aDecoder)
     }
     

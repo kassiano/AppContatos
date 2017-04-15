@@ -9,4 +9,7 @@ target 'App Contatos' do
 
 pod 'TPKeyboardAvoiding', '~> 1.3'
 
+pod 'Alamofire'
+pod 'AlamofireImage'
+
 end
